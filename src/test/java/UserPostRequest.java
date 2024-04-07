@@ -1,14 +1,13 @@
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.assertj.core.api.Assertions;
-import response.GetUserResponse;
+
 import java.util.HashMap;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class RegisterPostRequest {
+public class UserPostRequest {
 
     public static void main(String[] args) {
 
