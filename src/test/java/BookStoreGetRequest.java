@@ -10,7 +10,7 @@ public class BookStoreGetRequest {
     public static void main(String[] args) {
 
         // 1. İstek yapılacak URL'yi belirleyin
-        String url= "https://demoqa.com/swagger/#/BookStore/BookStoreV1BooksGet";
+        String url= "https://demoqa.com/BookStore/v1/Books";
 
         // 2. İstek başlıklarını belirleyin (opsiyonel)
         String contentType= ContentType.JSON.toString();

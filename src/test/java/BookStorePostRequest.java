@@ -13,7 +13,7 @@ public class BookStorePostRequest {
     public static void main(String[] args) {
 
         // 1. İstek yapılacak URL'yi belirleyin
-        String url = "https://demoqa.com/swagger/#/BookStore/BookStoreV1BooksPost";
+        String url = "https://demoqa.com/BookStore/v1/Books";
 
         // 2. İstek gövdesini ve başlığını oluşturun ve gerektiğinde parametreleri ekleyin
         Map<String, Object> headers = new HashMap<>();
@@ -48,9 +48,9 @@ public class BookStorePostRequest {
         //  GetUserResponse getUserResponse= response.body().as(GetUserResponse.class);
 
         assertThat(response.statusCode()).isEqualTo(200);
-//        assertThat(response.contentType()).isEqualTo("application/json");
-//        assertThat(response.jsonPath().getString("title")).isEqualTo("Java Testing with JUnit");
-//        assertThat(response.jsonPath().getString("author")).isEqualTo("Brian Okken");
+        assertThat(response.contentType()).isEqualTo("application/json");
+        assertThat(response.jsonPath().getString("title")).isEqualTo("Java Testing with JUnit");
+        assertThat(response.jsonPath().getString("author")).isEqualTo("Brian Okken");
 
         int statusCode = response.getStatusCode();
         if (statusCode == 200) {
